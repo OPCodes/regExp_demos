@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+
+    </style>
+    <script>
+        window.onload = function (){
+            var oQ = document.getElementById("QQ");
+            var meg = document.getElementById("meg");
+            var re = /^[1-9]\d{4,11}$/g;
+            oQ.oninput = function (){
+                var val = oQ.value;
+                if( re.test(val) ){
+                    meg.innerHTML = "是QQ";
+                } else {
+                    meg.innerHTML = "不是QQ";
+                }
+            }    
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="QQ" /><span id="meg"></span> 
+</body>
+</html>
+    
